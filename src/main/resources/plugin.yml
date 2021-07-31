@@ -1,0 +1,6 @@
+main: me.kingOf0.commandnegater.CommandNegater
+version: 1.0.2
+name: CommandNegater
+author: kingOf0
+commands:
+  admin: {}
