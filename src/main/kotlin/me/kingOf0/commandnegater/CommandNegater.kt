@@ -18,7 +18,7 @@ class CommandNegater : JavaPlugin() {
         PLUGIN_INSTANCE = this
         configFile = ConfigFile("config", this)
         if (configFile.getString("password", "default").equals("default")) {
-            val pass: String = Random.nextInt(100_000,999_999).toString()
+            val pass: String = Random.nextInt(100_000, 999_999).toString()
             configFile.set("password", pass)
             configFile.save()
             logger.warning(configFile.getString("passwordChanged", "Warning! New password generated and config has been reloaded check the new one!"))
