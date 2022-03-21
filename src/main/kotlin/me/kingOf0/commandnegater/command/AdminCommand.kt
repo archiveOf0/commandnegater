@@ -12,7 +12,7 @@ import org.bukkit.entity.Player
 class AdminCommand : CommandExecutor {
 
     //admin <args>
-    override fun onCommand(sender: CommandSender, p1: Command?, p2: String?, args: Array<String>): Boolean {
+    override fun onCommand(sender: CommandSender, p1: Command, p2: String, args: Array<out String>): Boolean {
         if (sender !is Player) {
             if (args.size == 1 && args[0] == "reload") {
                 PLUGIN_INSTANCE!!.reload()
@@ -44,7 +44,7 @@ class AdminCommand : CommandExecutor {
 
         allowedAdmins.add(sender.uniqueId)
         sender.sendMessage(config.getString("successfullyEnabledAdminMode", "Admin mode is successfully enabled"))
-        logger.info(config.getString("adminEnabledMessage", "%player% has enabled admin mode!").replace("%player%", sender.name))
+        logger.info(config.getString("adminEnabledMessage", "%player% has enabled admin mode!")!!.replace("%player%", sender.name))
         return true
     }
 

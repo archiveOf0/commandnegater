@@ -28,7 +28,7 @@ class CommandNegater : JavaPlugin() {
         server.pluginManager.registerEvents(AdminListener(), this)
         server.pluginManager.registerEvents(CommandListener(), this)
 
-        getCommand("admin").executor = AdminCommand()
+        getCommand("admin")?.setExecutor(AdminCommand())
     }
 
     override fun getConfig(): ConfigFile {

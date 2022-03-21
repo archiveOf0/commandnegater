@@ -43,11 +43,11 @@ class CommandListener : Listener {
     private fun action(event: PlayerCommandPreprocessEvent) {
         event.isCancelled = true
         if (config.getBoolean("debug")) {
-            logger.warning(config.getString("debugMessage", "%player% tried to use '%command%'")
+            logger.warning(config.getString("debugMessage", "%player% tried to use '%command%'")!!
                 .replace("%player%", event.player.name)
                 .replace("%command%", event.message))
         }
-        event.player.sendMessage(config.getStringList("message").toTypedArray())
+        event.player.sendMessage(*config.getStringList("message").toTypedArray())
     }
 
     @EventHandler
