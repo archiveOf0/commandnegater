@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "me.kingOf0"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenLocal()
@@ -19,6 +19,8 @@ dependencies {
 
     //kotlin 8
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72")
+    //coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7")
 }
 
 tasks.withType<KotlinCompile>() {

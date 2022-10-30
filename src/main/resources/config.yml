@@ -1,20 +1,17 @@
-password: default
-list:
-  - "gamemode"
-  - "give"
-isWhitelist: false
-debug: false
-debugMessage: "%player% tried to use '%command%'"
-adminEnabledMessage: "%player% has enabled admin mode!"
-reloadOnlyConsole: "You can only reload from console!"
-reloadMessage: "The plugin has reloaded."
-passwordChanged: "Warning! New password generated and config has been reloaded check the new one!"
-noConsole: "This command cannot be used from console."
-onlyConsole: "This command can be only used from console."
-alreadyEnabledAdminMode: "Admin mode is already enabled"
-successfullyEnabledAdminMode: "Admin mode is successfully enabled"
-unsuccessfulEnabledAdminMode: "You don't have permission to use this command!"
-message:
-  - ""
-  - " Its the message that shown to player when can't execute command"
-  - ""
+messages:
+  debugMessage: "%player% tried to use '%command%'"
+  reloaded: "The plugin has reloaded."
+  wrongPassword: "You dont have permission to use this command!"
+  alreadyAdmin: "Admin mode is already enabled"
+  adminModeEnabled: "Admin mode is successfully enabled"
+  adminModeEnabledDebug: "%player% has enabled admin mode!"
+  message:
+    - ""
+    - " Its the message that shown to player when can't execute command"
+    - ""
+settings:
+  debug: false
+  isWhitelist: false
+  list:
+    - "gamemode"
+    - "give"

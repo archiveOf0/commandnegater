@@ -2,7 +2,7 @@
     "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate"
 )
 
-package me.kingOf0.commandnegater.file
+package me.kingOf0.commandnegater.util.file
 
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
