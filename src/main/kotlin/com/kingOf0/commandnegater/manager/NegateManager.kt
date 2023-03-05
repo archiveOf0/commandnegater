@@ -4,7 +4,6 @@ import com.kingOf0.commandnegater.LOGGER
 import com.kingOf0.commandnegater.base.BlackCommandList
 import com.kingOf0.commandnegater.base.CommandList
 import com.kingOf0.commandnegater.base.WhiteCommandList
-import org.bukkit.entity.Player
 import java.util.*
 
 object NegateManager : IManager("NegateManager") {

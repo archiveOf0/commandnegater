@@ -14,7 +14,7 @@ class CommandListener : Listener {
     fun onCommand(event: PlayerCommandPreprocessEvent) {
         if (NegateManager.isAdmin(event.player.uniqueId)) return
 
-        val command = event.message.split(" ")[0].substring(1).toLowerCase(Locale.ENGLISH)
+        val command = event.message.split(" ")[0].substring(1).lowercase(Locale.ENGLISH)
         if (NegateManager.isAllowedCommand(command)) return
 
         event.isCancelled = true

@@ -2,7 +2,6 @@ package com.kingOf0.commandnegater.command
 
 import com.kingOf0.commandnegater.manager.FileManager
 import com.kingOf0.commandnegater.manager.NegateManager
-import com.kingOf0.commandnegater.manager.NegateManager.admins
 import com.kingOf0.commandnegater.manager.SettingsManager
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor

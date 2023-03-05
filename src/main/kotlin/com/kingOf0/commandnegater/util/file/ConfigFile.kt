@@ -1,4 +1,5 @@
-@file:Suppress("MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+@file:Suppress(
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
     "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate"
 )
 

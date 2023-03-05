@@ -23,7 +23,7 @@ dependencies {
     compileOnly("com.github.cryptomorin:XSeries:8.7.0")
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
