@@ -1,18 +1,17 @@
-package me.kingOf0.commandnegater
+package com.kingOf0.commandnegater
 
-import me.kingOf0.commandnegater.command.AdminCommand
-import me.kingOf0.commandnegater.listener.AdminListener
-import me.kingOf0.commandnegater.listener.CommandListener
-import me.kingOf0.commandnegater.listener.TabListener
-import me.kingOf0.commandnegater.manager.FileManager
-import me.kingOf0.commandnegater.manager.NegateManager
-import me.kingOf0.commandnegater.manager.SettingsManager
+import com.kingOf0.commandnegater.command.AdminCommand
+import com.kingOf0.commandnegater.listener.AdminListener
+import com.kingOf0.commandnegater.listener.CommandListener
+import com.kingOf0.commandnegater.manager.FileManager
+import com.kingOf0.commandnegater.manager.NegateManager
+import com.kingOf0.commandnegater.manager.SettingsManager
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
 
-lateinit var PLUGIN_INSTANCE: CommandNegater
+lateinit var PLUGIN_INSTANCE: KCommandNegater
 lateinit var LOGGER: Logger
-class CommandNegater : JavaPlugin() {
+class KCommandNegater : JavaPlugin() {
 
     override fun onLoad() {
         PLUGIN_INSTANCE = this

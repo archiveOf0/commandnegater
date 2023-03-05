@@ -1,3 +1,3 @@
 
-rootProject.name = "CommandNegater"
+rootProject.name = "KCommandNegater"
 

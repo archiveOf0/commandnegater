@@ -1,15 +1,15 @@
-package me.kingOf0.commandnegater.manager
+package com.kingOf0.commandnegater.manager
 
-import me.kingOf0.commandnegater.LOGGER
-import me.kingOf0.commandnegater.list.BlackListListener
-import me.kingOf0.commandnegater.list.IListListener
-import me.kingOf0.commandnegater.list.WhiteListListener
+import com.kingOf0.commandnegater.LOGGER
+import com.kingOf0.commandnegater.base.BlackCommandList
+import com.kingOf0.commandnegater.base.CommandList
+import com.kingOf0.commandnegater.base.WhiteCommandList
 import org.bukkit.entity.Player
 import java.util.*
 
 object NegateManager : IManager("NegateManager") {
 
-    private lateinit var listener: IListListener
+    private lateinit var commandList: CommandList
 
     val admins = HashSet<UUID>()
     val commands = HashSet<String>()
@@ -20,7 +20,7 @@ object NegateManager : IManager("NegateManager") {
         FileManager.config.apply {
             getConfigurationSection("settings")?.apply {
                 for (command in getStringList("list")) {
-                    commands.add(command.toLowerCase(Locale.ENGLISH))
+                    commands.add(command.lowercase(Locale.ENGLISH))
                 }
             }
         }
@@ -37,7 +37,7 @@ object NegateManager : IManager("NegateManager") {
         }
         if (SettingsManager.isWhitelist) commands.add("commandnegater")
 
-        listener = if (SettingsManager.isWhitelist) WhiteListListener() else BlackListListener()
+        commandList = if (SettingsManager.isWhitelist) WhiteCommandList() else BlackCommandList()
         return true
     }
 
@@ -48,18 +48,26 @@ object NegateManager : IManager("NegateManager") {
     }
 
     fun isAllowedCommand(command: String): Boolean {
-        return listener.isCommandAllowed(command)
+        return commandList.isCommandAllowed(command)
     }
 
-    fun isAdmin(player: Player): Boolean {
-        return admins.contains(player.uniqueId)
+    fun isAdmin(uuid: UUID): Boolean {
+        return admins.contains(uuid)
     }
 
     fun mapTabComplete(commands: MutableCollection<String>) {
         for (command in ArrayList(commands)) {
-            if (!listener.isCommandAllowed(command.split(":").last()))
+            if (!commandList.isCommandAllowed(command.split(":").last()))
                 commands.remove(command)
         }
+    }
+
+    fun removeAdmin(uuid: UUID) {
+        admins.remove(uuid)
+    }
+
+    fun addAdmin(uuid: UUID) {
+        admins.add(uuid)
     }
 
 }

@@ -1,10 +1,10 @@
-package me.kingOf0.commandnegater.manager
+package com.kingOf0.commandnegater.manager
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.kingOf0.commandnegater.PLUGIN_INSTANCE
-import me.kingOf0.commandnegater.util.file.ConfigFile
+import com.kingOf0.commandnegater.PLUGIN_INSTANCE
+import com.kingOf0.commandnegater.util.file.ConfigFile
 import java.io.File
 import java.io.FileWriter
 import java.text.SimpleDateFormat

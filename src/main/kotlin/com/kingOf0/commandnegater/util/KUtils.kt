@@ -1,6 +1,6 @@
-package me.kingOf0.commandnegater.util
+package com.kingOf0.commandnegater.util
 
-import me.kingOf0.commandnegater.PLUGIN_INSTANCE
+import com.kingOf0.commandnegater.PLUGIN_INSTANCE
 import org.bukkit.Bukkit
 
 object KUtils {

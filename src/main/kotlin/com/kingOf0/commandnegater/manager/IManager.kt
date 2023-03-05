@@ -1,7 +1,7 @@
-package me.kingOf0.commandnegater.manager
+package com.kingOf0.commandnegater.manager
 
-import me.kingOf0.commandnegater.LOGGER
-import me.kingOf0.commandnegater.util.KUtils.disable
+import com.kingOf0.commandnegater.LOGGER
+import com.kingOf0.commandnegater.util.KUtils.disable
 
 abstract class IManager(private val name: String) {
 

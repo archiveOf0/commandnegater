@@ -1,6 +1,9 @@
-main: me.kingOf0.commandnegater.CommandNegater
-version: 3.0.3
-name: CommandNegater
+main: me.kingOf0.commandnegater.KCommandNegater
+version: 3.0.4
+name: KCommandNegater
 author: kingOf0
+api-version: 1.13
+depend:
+  - KKotlin
 commands:
   commandnegater: {}

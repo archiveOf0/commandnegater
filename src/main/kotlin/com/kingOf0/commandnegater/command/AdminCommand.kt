@@ -1,9 +1,9 @@
-package me.kingOf0.commandnegater.command
+package com.kingOf0.commandnegater.command
 
-import me.kingOf0.commandnegater.manager.FileManager
-import me.kingOf0.commandnegater.manager.NegateManager
-import me.kingOf0.commandnegater.manager.NegateManager.admins
-import me.kingOf0.commandnegater.manager.SettingsManager
+import com.kingOf0.commandnegater.manager.FileManager
+import com.kingOf0.commandnegater.manager.NegateManager
+import com.kingOf0.commandnegater.manager.NegateManager.admins
+import com.kingOf0.commandnegater.manager.SettingsManager
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
@@ -20,7 +20,7 @@ class AdminCommand : CommandExecutor {
             commandSender.sendMessage(SettingsManager.reloaded)
             return true
         }
-        if (admins.contains(commandSender.uniqueId)) {
+        if (NegateManager.isAdmin(commandSender.uniqueId)) {
             commandSender.sendMessage(SettingsManager.alreadyAdmin)
             return true
         }
@@ -30,7 +30,7 @@ class AdminCommand : CommandExecutor {
             return true
         }
 
-        admins.add(commandSender.uniqueId)
+        NegateManager.addAdmin(commandSender.uniqueId)
         commandSender.sendMessage(SettingsManager.adminModeEnabled)
         FileManager.log(SettingsManager.adminModeEnabledDebug.replace("%player%", commandSender.name))
         return true

@@ -1,4 +1,4 @@
-package me.kingOf0.commandnegater.manager
+package com.kingOf0.commandnegater.manager
 
 object SettingsManager : IManager("SettingsManager") {
 
