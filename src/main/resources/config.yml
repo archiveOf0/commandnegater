@@ -1,7 +1,6 @@
 messages:
   debugMessage: "%player% tried to use '%command%'"
   reloaded: "The plugin has reloaded."
-  wrongPassword: "You dont have permission to use this command!"
   alreadyAdmin: "Admin mode is already enabled"
   adminModeEnabled: "Admin mode is successfully enabled"
   adminModeEnabledDebug: "%player% has enabled admin mode!"

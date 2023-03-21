@@ -25,7 +25,7 @@ class AdminCommand : CommandExecutor {
         }
 
         if (args.getOrNull(0) != NegateManager.password) {
-            commandSender.sendMessage(SettingsManager.wrongPassword)
+            commandSender.sendMessage(*SettingsManager.message)
             return true
         }
 

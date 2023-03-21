@@ -4,7 +4,6 @@ object SettingsManager : IManager("SettingsManager") {
 
     var debugMessage = "%player% tried to use '%command%'"
     var reloaded = "The plugin has reloaded."
-    var wrongPassword = "You dont have permission to use this command!"
     var alreadyAdmin = "Admin mode is already enabled"
     var adminModeEnabled = "Admin mode is successfully enabled"
     var adminModeEnabledDebug = "%player% has enabled admin mode!"
@@ -18,7 +17,6 @@ object SettingsManager : IManager("SettingsManager") {
             getConfigurationSection("messages")?.apply {
                 if (isString("debugMessage")) debugMessage = getString("debugMessage")!!
                 if (isString("reloaded")) reloaded = getString("reloaded")!!
-                if (isString("wrongPassword")) wrongPassword = getString("wrongPassword")!!
                 if (isString("alreadyAdmin")) alreadyAdmin = getString("alreadyAdmin")!!
                 if (isString("adminModeEnabled")) adminModeEnabled = getString("adminModeEnabled")!!
                 if (isString("adminModeEnabledDebug")) adminModeEnabledDebug = getString("adminModeEnabledDebug")!!
