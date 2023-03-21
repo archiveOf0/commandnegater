@@ -1,9 +1,11 @@
 main: com.kingOf0.commandnegater.KCommandNegater
-version: 3.0.6
+version: 3.0.7
 name: KCommandNegater
 author: kingOf0
 api-version: 1.13
 depend:
   - KKotlin
+softdepend:
+  - ProtocolLib
 commands:
   commandnegater: {}

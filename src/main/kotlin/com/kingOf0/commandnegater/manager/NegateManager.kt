@@ -56,8 +56,9 @@ object NegateManager : IManager("NegateManager") {
 
     fun mapTabComplete(commands: MutableCollection<String>) {
         for (command in ArrayList(commands)) {
-            if (!commandList.isCommandAllowed(command.split(":").last()))
+            if (!commandList.isCommandAllowed(command.split(":").last().removePrefix("/"))) {
                 commands.remove(command)
+            }
         }
     }
 

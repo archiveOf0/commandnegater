@@ -1,16 +1,22 @@
 messages:
   debugMessage: "%player% tried to use '%command%'"
-  reloaded: "The plugin has reloaded."
-  alreadyAdmin: "Admin mode is already enabled"
-  adminModeEnabled: "Admin mode is successfully enabled"
+  reloaded: "§eEklenti yeniden yüklendi."
+  alreadyAdmin: "Admin modu zaten aktif."
+  adminModeEnabled: "Admin modu aktifleştirildi"
   adminModeEnabledDebug: "%player% has enabled admin mode!"
   message:
+    - "§m                                                                                "
     - ""
-    - " Its the message that shown to player when can't execute command"
+    - "                   §c§l→ Komut Engelleme ←             "
     - ""
+    - "   §a→ §eYalnızca izin verilen komutları kullanabilirsiniz."
+    - "   §a→ §eKomutu doğru yazdığınızdan emin olun."
+    - ""
+    - "§m                                                                                "
 settings:
   debug: false
-  isWhitelist: false
+  isWhitelist: true
   list:
-    - "gamemode"
-    - "give"
+    - "help"
+    - "msg"
+    - "say"

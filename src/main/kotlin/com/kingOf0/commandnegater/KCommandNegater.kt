@@ -1,11 +1,5 @@
 package com.kingOf0.commandnegater
 
-import com.cryptomorin.xseries.XMaterial
-import com.kingOf0.commandnegater.command.AdminCommand
-import com.kingOf0.commandnegater.listener.AdminListener
-import com.kingOf0.commandnegater.listener.CommandListener
-import com.kingOf0.commandnegater.listener.tab.LegacyTabListener
-import com.kingOf0.commandnegater.listener.tab.TabListener
 import com.kingOf0.commandnegater.manager.FileManager
 import com.kingOf0.commandnegater.manager.NegateManager
 import com.kingOf0.commandnegater.manager.RegisterManager

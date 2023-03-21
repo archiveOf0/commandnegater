@@ -12,15 +12,19 @@ version = "3.0.2"
 repositories {
     mavenLocal()
     mavenCentral()
+    maven("https://repo.dmulloy2.net/repository/public/")
 }
 
 dependencies {
     compileOnly ("org.spigotmc:spigot:1.18.1-R0.1-SNAPSHOT")
 
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib")
-    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt")
     //com github cryptomorin xseries
     compileOnly("com.github.cryptomorin:XSeries:8.7.0")
+
+    compileOnly("com.comphenix.protocol:ProtocolLib:4.7.0")
+
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt")
 }
 
 tasks.withType<KotlinCompile> {

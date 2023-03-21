@@ -6,8 +6,8 @@ import com.kingOf0.commandnegater.PLUGIN_INSTANCE
 import com.kingOf0.commandnegater.command.AdminCommand
 import com.kingOf0.commandnegater.listener.AdminListener
 import com.kingOf0.commandnegater.listener.CommandListener
-import com.kingOf0.commandnegater.listener.tab.LegacyTabListener
-import com.kingOf0.commandnegater.listener.tab.TabListener
+import com.kingOf0.commandnegater.listener.tab.ProtocolTabListener
+import com.kingOf0.commandnegater.listener.tab.BukkitTabListener
 import org.bukkit.Bukkit
 
 object RegisterManager : IManager("RegisterManager") {
@@ -17,17 +17,21 @@ object RegisterManager : IManager("RegisterManager") {
         return true
     }
 
-    fun register() {
+    private fun register() {
         val pluginManager = Bukkit.getPluginManager()
         pluginManager.registerEvents(AdminListener(), PLUGIN_INSTANCE)
         pluginManager.registerEvents(CommandListener(), PLUGIN_INSTANCE)
 
         if (XMaterial.supports(13)) {
-            pluginManager.registerEvents(TabListener(), PLUGIN_INSTANCE)
+            pluginManager.registerEvents(BukkitTabListener(), PLUGIN_INSTANCE)
             LOGGER.info("+ TabListener registered successfully")
         } else {
-            pluginManager.registerEvents(LegacyTabListener(), PLUGIN_INSTANCE)
-            LOGGER.info("+ LegacyTabListener registered successfully")
+            if (pluginManager.isPluginEnabled("ProtocolLib")) {
+                ProtocolTabListener.register()
+                LOGGER.info("+ ProtocolLibTabListener registered successfully")
+            } else {
+                LOGGER.info("+ ProtocolLibTabListener not registered, ProtocolLib not found")
+            }
         }
 
         PLUGIN_INSTANCE.getCommand("commandnegater")?.setExecutor(AdminCommand())
